@@ -20,3 +20,5 @@ patient_dict = {'name':'Avishek Basyal','gender':'male','address':address1}
 patient1 = Patient(**patient_dict)
 
 print(patient1.address.city)
+
+
