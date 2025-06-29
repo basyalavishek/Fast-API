@@ -20,13 +20,13 @@ patient_dict = {'name':'Avishek Basyal','gender':'male','address':address1}
 
 patient1 = Patient(**patient_dict)
 
-temp = patient1.model_dump() # exporting the patient1 in dictionary format
+temp = patient1.model_dump() # exporting the patient1(pydantic object) in dictionary format
 print(temp)
 
 temp1 = patient1.model_dump(include='name') # only export the model with name field in dictionary 
 print(temp1)
 
-temp2 = patient1.model_dump(exclude_unset=True) # only export the field that are set while creating object , like smoke is not set so it will not be shown
+temp2 = patient1.model_dump(exclude_unset=True) # only export the field that are set while creating object , like smoke is not set so it will not be exported to dictionary
 print(temp2)
 
 temp3 = patient1.model_dump(exclude=['address'])
